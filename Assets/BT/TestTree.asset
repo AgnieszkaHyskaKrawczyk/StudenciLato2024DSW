@@ -1,0 +1,149 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d285eb63c2cdd74180de7cfceaa96ad, type: 3}
+  m_Name: TestTree
+  m_EditorClassIdentifier: 
+  rootNode:
+    rid: 402557829485953024
+  nodes:
+  - rid: 402557829485953024
+  - rid: 402557829485953026
+  - rid: 402557829485953028
+  - rid: 402557829485953032
+  - rid: 402557829485953035
+  treeState: 0
+  blackboard:
+    keys:
+    - rid: 402557829485953029
+    - rid: 402557829485953030
+  viewPosition: {x: 342.4, y: 476, z: 0}
+  viewScale: {x: 0.7561437, y: 0.7561437, z: 1}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 402557829485953024
+      type: {class: RootNode, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 1601b6d0-d62a-4cec-a3f0-3231be6f9547
+        position: {x: 0, y: -60}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 402557829485953035
+    - rid: 402557829485953026
+      type: {class: Sequencer, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: c03335e6dfd84b84ab52e33005d87d18
+        position: {x: -30, y: 195}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        children:
+        - rid: 402557829485953028
+        - rid: 402557829485953032
+    - rid: 402557829485953028
+      type: {class: GetNextWaypoint, ns: , asm: Assembly-CSharp}
+      data:
+        state: 0
+        started: 0
+        guid: 9226b477bada3194ea091b452458b723
+        position: {x: -240, y: 330}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        useRandom:
+          reference:
+            rid: -2
+          defaultValue: 1
+        path:
+          reference:
+            rid: 402557829485953030
+          defaultValue: []
+        destination:
+          reference:
+            rid: 402557829485953029
+          defaultValue: {x: 0, y: 0, z: 0}
+    - rid: 402557829485953029
+      type: {class: Vector3Key, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        name: destination
+        typeName: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+          PublicKeyToken=null
+        value: {x: 0, y: 0, z: 0}
+    - rid: 402557829485953030
+      type: {class: SharedTransformArrayKey, ns: BT, asm: Assembly-CSharp}
+      data:
+        name: path
+        typeName: UnityEngine.Transform[], UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+        value: []
+    - rid: 402557829485953032
+      type: {class: MoveToPosition, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: fd5e142d195b037449ad1ba9e1296135
+        position: {x: 15, y: 330}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        speed:
+          reference:
+            rid: -2
+          defaultValue: 5
+        stoppingDistance:
+          reference:
+            rid: -2
+          defaultValue: 0.1
+        updateRotation:
+          reference:
+            rid: -2
+          defaultValue: 1
+        acceleration:
+          reference:
+            rid: -2
+          defaultValue: 40
+        tolerance:
+          reference:
+            rid: -2
+          defaultValue: 1
+        targetPosition:
+          reference:
+            rid: 402557829485953029
+          defaultValue: {x: 0, y: 0, z: 0}
+    - rid: 402557829485953035
+      type: {class: Repeat, ns: TheKiwiCoder, asm: thekiwicoder.behaviourtreeeditor}
+      data:
+        state: 0
+        started: 0
+        guid: 2def9472cf59f004f8b22b9efeadadda
+        position: {x: 0, y: 45}
+        blackboard:
+          keys: []
+        description: 
+        drawGizmos: 0
+        child:
+          rid: 402557829485953026
+        restartOnSuccess: 1
+        restartOnFailure: 0
+        maxRepeats: 0
