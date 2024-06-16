@@ -1,0 +1,87 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468bba33bbf64a0c92994811b4513256, type: 3}
+  m_Name: New Level Data
+  m_EditorClassIdentifier: 
+  <Clip>k__BackingField: {fileID: 8300000, guid: f420fd7e0f56b984d96a284b87b59752, type: 3}
+  <MovementCurve>k__BackingField:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 19.814442
+      outSlope: 19.814442
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.022347555
+      value: 1.4428043
+      inSlope: 12.837592
+      outSlope: 12.837592
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.10909617
+      value: 1.9512156
+      inSlope: 4.7400823
+      outSlope: 4.7400823
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5748065
+      value: 2.1213949
+      inSlope: 0.0907862
+      outSlope: 0.0907862
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.09794715
+      outWeight: 0.15392914
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -2.6373754
+      outSlope: -2.6373754
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  <Speed>k__BackingField: 5
+  <Walls>k__BackingField:
+  - <TimelinePosition>k__BackingField: 0
+    <Elements>k__BackingField:
+    - <Position>k__BackingField: 0
+      <Color>k__BackingField: 0
+      <Direction>k__BackingField: 0
+    - <Position>k__BackingField: 1
+      <Color>k__BackingField: 1
+      <Direction>k__BackingField: 0
+  - <TimelinePosition>k__BackingField: 2
+    <Elements>k__BackingField:
+    - <Position>k__BackingField: 1
+      <Color>k__BackingField: 0
+      <Direction>k__BackingField: 3
+    - <Position>k__BackingField: 2
+      <Color>k__BackingField: 0
+      <Direction>k__BackingField: 0
+    - <Position>k__BackingField: 11
+      <Color>k__BackingField: 1
+      <Direction>k__BackingField: 8

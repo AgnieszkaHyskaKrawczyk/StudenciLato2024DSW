@@ -5,6 +5,7 @@ namespace BeatSaber.Core
         Red,
         Blue,
         Green,
-        Yellow
+        Yellow,
+        None
     }
 }

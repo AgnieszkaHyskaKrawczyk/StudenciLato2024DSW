@@ -6,6 +6,8 @@ namespace BeatSaber.Gameloop
     public class LevelData : ScriptableObject
     {
         [field:SerializeField] public AudioClip Clip { get; private set; }
+        [field: SerializeField] public AnimationCurve MovementCurve { get; private set; }
+        [field: SerializeField] public float Speed { get; private set; }
         [field: SerializeField] public Wall[] Walls { get; private set; }
 
         public int WallsLength { get; private set; }

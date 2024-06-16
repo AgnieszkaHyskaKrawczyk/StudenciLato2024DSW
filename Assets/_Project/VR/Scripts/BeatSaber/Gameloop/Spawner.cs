@@ -12,10 +12,11 @@ namespace BeatSaber.Gameloop
         [SerializeField] private SliceableCube prefab;
         [SerializeField] private ColorsMaterialsDict materials = new ColorsMaterialsDict();
         [SerializeField] private SpawnPoints spawnPoints = new SpawnPoints();
+        [SerializeField] private Transform curveEndPoint;
         
         private bool _started;
         private int _currentWallIndex;
-        private LevelData _levelData;
+        [SerializeField] private LevelData _levelData;
         private IObjectPool<SliceableCube> _pool;
         private float _currentTimelinePosition;
 
@@ -43,6 +44,9 @@ namespace BeatSaber.Gameloop
             _currentWallIndex++;
         }
 
+        [NaughtyAttributes.Button]
+        private void StartLevel() => StartLevel(_levelData);
+        
         public void StartLevel(LevelData level)
         {
             _levelData = level;
@@ -77,7 +81,7 @@ namespace BeatSaber.Gameloop
         private SliceableCube OnCreate()
         {
             var instance = Instantiate(prefab);
-            instance.OnCreate(_pool);
+            instance.OnCreate(_pool, _levelData.MovementCurve, _levelData.Speed, transform.position, curveEndPoint.position);
             return instance;
         }
 

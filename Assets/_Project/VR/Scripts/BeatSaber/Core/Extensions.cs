@@ -4,11 +4,11 @@ namespace BeatSaber.Core
 {
     public static class Extensions
     {
-        public static void TryRelease(this GameObject obj)
+        public static void TryRelease(this GameObject obj, CubeColor color)
         {
             if (obj.TryGetComponent<IPooledObject>(out var component))
             {
-                component.Release();
+                component.Release(color);
                 return;
             }
             

@@ -12,6 +12,7 @@ namespace BeatSaber.Slicening
         [SerializeField] private VelocityEstimator velocityEstimator;
         [SerializeField] private Material slicedMaterial;
         [SerializeField] private LayerMask mask;
+        [SerializeField] private CubeColor color;
         [SerializeField] private float force;
 
         private void FixedUpdate()
@@ -37,7 +38,7 @@ namespace BeatSaber.Slicening
                 AddComponentsToSlicedObject(upper);
                 AddComponentsToSlicedObject(lower);
                 
-                target.TryRelease();
+                target.TryRelease(color);
             }
         }
 
